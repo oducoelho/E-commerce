@@ -1,5 +1,5 @@
 import { ContentContainer } from '../../styles/pages/content'
-import { BuyArea } from './components/BuyArea/Index'
+import { BuyArea } from './components/BuyArea'
 import { Images } from './components/Images'
 
 export const Content = () => {

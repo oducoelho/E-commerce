@@ -5,7 +5,7 @@ export const Thumbnails = styled('div', {
   div: {
     display: 'flex',
     flexDirection: 'row',
-    gap: '40px',
+    gap: '42px',
     width: '100%',
     img: {
       marginTop: '30px',
@@ -16,8 +16,9 @@ export const Thumbnails = styled('div', {
   }
 })
 export const BigImage = styled('div', {
+  marginTop: '40px',
   img: {
-    width: '50%',
+    width: '90%',
     borderRadius: 8,
   }
 })

@@ -31,6 +31,7 @@ export const {
       xl: '2.4rem',
       '2xl': '3.2rem',
       '3xl': '3.6rem',
+      '4xl': '4.5rem',
     }
   }
 })

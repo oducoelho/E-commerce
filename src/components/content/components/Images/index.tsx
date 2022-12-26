@@ -1,4 +1,4 @@
-import { BigImage, ImagesContainer, TextStyled, Thumbnails } from '../../../../styles/pages/images'
+import { BigImage, ImagesContainer, Thumbnails } from '../../../../styles/pages/images'
 import { useState } from 'react'
 
 import FirstImage from '../../../../assets/image-product-1.jpg'
