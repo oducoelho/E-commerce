@@ -4,8 +4,10 @@ import { Button, DialogContent, DialogLine, DialogOverlay, DialogTitle, Fieldset
 
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
+import { useCart } from "../../hook/useCart";
 
 export const Header = () => {
+  const { CartItems } useCart()
   return (
     <HeaderContainer>
       <HeaderPartOne>
@@ -30,9 +32,6 @@ export const Header = () => {
               <DialogTitle>Cart</DialogTitle>
               <DialogLine>
               </DialogLine>
-              <Fieldset>
-                <h1>Your cart is empty</h1>
-              </Fieldset>
               <Dialog.Close asChild>
                 <IconButton aria-label="Close">
                   <Cross2Icon />
