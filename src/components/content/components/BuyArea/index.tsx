@@ -1,5 +1,4 @@
 import { ShoppingCart } from "phosphor-react"
-import { useCart } from '../../../../hook/useCart'
 import { 
   Button,   
   BuyAreaContainer, 
@@ -10,29 +9,18 @@ import {
   Title 
 } from '../../../../styles/pages/buyArea'
 
-export interface Product {
-  id: number
-  name: string
-  title: string
-  subTitle: string
-  price: number
-  quantity: number
-}
-interface ProductProps {
-  product: Product
-} 
-
-export const BuyArea = ({ product }: ProductProps) => {
-  const { addToCart } = useCart()
-
-  console.log(product)
+export const BuyArea = () => {
 
   return (
     <BuyAreaContainer>
         <div>
-          <ShopName></ShopName>
-          <Title></Title>
-          <SubTitle></SubTitle>
+          <ShopName>SNEAKER COMPANY</ShopName>
+          <Title>Fall Limited Edition Sneakers</Title>
+          <SubTitle> 
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything the
+            weather can offer.
+          </SubTitle>
           <Price>
             <span>$</span>
             <strong>50%</strong>
@@ -44,7 +32,7 @@ export const BuyArea = ({ product }: ProductProps) => {
               <span></span>
               <button>+</button>
             </div>
-            <Button onClick={() => addToCart({...product})}>
+            <Button>
               <ShoppingCart /> Add to cart
             </Button>
           </FinishArea>
