@@ -9,6 +9,7 @@ import {
   Title 
 } from '../../../../styles/pages/buyArea'
 import { useCart } from '../../../../hook/useCart'
+import { useState } from "react";
 
 export interface Product {
   id: number;
@@ -23,23 +24,21 @@ interface ProductProps {
 }
 
 export const BuyArea = ({ product }: ProductProps) => {
-  //console.log(product)
-
-  const { addToCart, changeCartItemQuantity } = useCart()
+  const [quantity, setQuantity] = useState(1)
+  const { addToCart } = useCart()
 
   const handleAddToCart = () => {
     const shoesToAdd = {
       ...product,
+      quantity,
     }
     addToCart(shoesToAdd)
   }
-
   const handleIncrease = () => {
-    changeCartItemQuantity(product.id, 'increase')
+    setQuantity((state) => state + 1)
   }
-
   const handleDecrease = () => {
-    changeCartItemQuantity(product.id, 'decrease')
+    setQuantity((state) => Math.max(state - 1, 1))
   }
 
   return (
@@ -56,7 +55,7 @@ export const BuyArea = ({ product }: ProductProps) => {
           <FinishArea>
             <div>
               <button onClick={handleDecrease}>-</button>
-              <span>{product.quantity}</span>
+              <span>{quantity}</span>
               <button onClick={handleIncrease}>+</button>
             </div>
             <Button onClick={handleAddToCart}>

@@ -20,15 +20,14 @@ interface CartContextType {
     type: 'increase' | 'decrease',
   ) => void
   removeCartItem: (productId: number) => void
-  cleanCart: () => void
 }
 
-export const CartContext = createContext<CartContextType>({} as CartContextType)
+export const CartContext = createContext({} as CartContextType)
 
-export const CartContextProvaider = ({
-  children,
-}: CartContextProvaiderProps) => {
+export const CartContextProvaider = ({ children }: CartContextProvaiderProps) => {
   const [cartItems, setCartItems] = useState<Product[]>([])
+
+  console.log(cartItems)
 
   const addToCart = (product: CartItem) => {
     const productAlreadyInCart = cartItems.findIndex(
@@ -80,11 +79,6 @@ export const CartContextProvaider = ({
 
     setCartItems(newCart)
   }
-
-  const cleanCart = () => {
-    setCartItems([])
-  }
-
   return (
     <CartContext.Provider
       value={{
@@ -93,7 +87,6 @@ export const CartContextProvaider = ({
         changeCartItemQuantity,
         removeCartItem,
         cartItemsTotal,
-        cleanCart,
         cartQuantity,
       }}
     >
