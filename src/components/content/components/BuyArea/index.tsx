@@ -8,31 +8,58 @@ import {
   SubTitle, 
   Title 
 } from '../../../../styles/pages/buyArea'
+import { useCart } from '../../../../hook/useCart'
 
-export const BuyArea = () => {
+export interface Product {
+  id: number;
+  shopName: string;
+  title: string;
+  subTitle: string;
+  price: number;
+  quantity: number;
+}
+interface ProductProps {
+  product: Product
+}
+
+export const BuyArea = ({ product }: ProductProps) => {
+  //console.log(product)
+
+  const { addToCart, changeCartItemQuantity } = useCart()
+
+  const handleAddToCart = () => {
+    const shoesToAdd = {
+      ...product,
+    }
+    addToCart(shoesToAdd)
+  }
+
+  const handleIncrease = () => {
+    changeCartItemQuantity(product.id, 'increase')
+  }
+
+  const handleDecrease = () => {
+    changeCartItemQuantity(product.id, 'decrease')
+  }
 
   return (
     <BuyAreaContainer>
         <div>
-          <ShopName>SNEAKER COMPANY</ShopName>
-          <Title>Fall Limited Edition Sneakers</Title>
-          <SubTitle> 
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they'll withstand everything the
-            weather can offer.
-          </SubTitle>
+          <ShopName>{product.shopName}</ShopName>
+          <Title>{product.title}</Title>
+          <SubTitle>{product.subTitle}</SubTitle>
           <Price>
-            <span>$</span>
+            <span>${product.price}</span>
             <strong>50%</strong>
             <p>$250.00</p>
           </Price>
           <FinishArea>
             <div>
-              <button>-</button>
-              <span></span>
-              <button>+</button>
+              <button onClick={handleDecrease}>-</button>
+              <span>{product.quantity}</span>
+              <button onClick={handleIncrease}>+</button>
             </div>
-            <Button>
+            <Button onClick={handleAddToCart}>
               <ShoppingCart /> Add to cart
             </Button>
           </FinishArea>
