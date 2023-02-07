@@ -9,14 +9,15 @@ import { useCart } from "../../hook/useCart";
 import thumb1 from '../../assets/image-thumbnail-1.jpg'
 import { CartItem } from "../../context/CartContext";
 
-interface CoffeCartCardProps {
+interface CartProps {
   shoe: CartItem
 }
 
-export const Header = ({ shoe }: CoffeCartCardProps) => {
+export const Header = ({ shoe }: CartProps) => {
   const { cartItems, removeCartItem, cartItemsTotal,  } = useCart()
-
-  console.log(cartItems)
+  const removeShoe = () => {
+    alert('removeu')
+  }
 
   return (
     <HeaderContainer>
@@ -53,11 +54,11 @@ export const Header = ({ shoe }: CoffeCartCardProps) => {
                 <CheckoutContent>
                   <p>Fall Limited Edition Sneakers</p>
                   <div>
-                    $125.00 x {shoe.quantity}<strong>{cartItemsTotal}</strong>
+                    $125.00 x {cartItems.map((quantity) => (quantity.quantity))} <strong>{cartItemsTotal}</strong>
                   </div>
                 </CheckoutContent>
                 <span>
-                  <Trash size={25} onClick={() => removeCartItem(shoe.id)} />
+                  <Trash size={25} onClick={removeShoe} />
                 </span>
               </CartNotEmpty>
               }
