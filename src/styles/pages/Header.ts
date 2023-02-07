@@ -173,3 +173,32 @@ export const Input = styled('input', {
 
   '&:focus': { boxShadow: `0 0 0 2px ${violet.violet8}` },
 });
+
+export const CartNotEmpty = styled('div', {
+  display: 'flex',
+  gap: '10px',
+  img: {
+    width: '70px',
+    borderRadius: 8,
+  },
+
+  span: {
+    padding: '20px 0px 0px 50px',
+  }
+})
+
+export const CheckoutContent = styled('div', {
+  display: 'flex',
+  padding: '10px 0px',
+  flexFlow: 'column',
+  justifyContent: 'space-between',
+  width: '250px',
+
+  p: {
+    fontSize: '15px',
+  },
+
+  div: {
+    fontSize: '15px',
+  }
+})

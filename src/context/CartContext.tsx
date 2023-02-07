@@ -13,7 +13,6 @@ interface CartContextProvaiderProps {
 interface CartContextType {
   cartItems: Product[]
   cartItemsTotal: number
-  cartQuantity: number
   addToCart: (product: CartItem) => void
   changeCartItemQuantity: (
     cartItemId: number,
@@ -42,8 +41,6 @@ export const CartContextProvaider = ({ children }: CartContextProvaiderProps) =>
     })
     setCartItems(newCart)
   }
-
-  const cartQuantity = cartItems.length
 
   const changeCartItemQuantity = (
     cartItemId: number,
@@ -87,7 +84,6 @@ export const CartContextProvaider = ({ children }: CartContextProvaiderProps) =>
         changeCartItemQuantity,
         removeCartItem,
         cartItemsTotal,
-        cartQuantity,
       }}
     >
       {children}

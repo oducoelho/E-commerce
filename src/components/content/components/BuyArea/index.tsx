@@ -24,7 +24,7 @@ interface ProductProps {
 }
 
 export const BuyArea = ({ product }: ProductProps) => {
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(0)
   const { addToCart } = useCart()
 
   const handleAddToCart = () => {
