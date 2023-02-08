@@ -1,12 +1,12 @@
 import { styled } from "..";
 
 export const ContentContainer = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)',
-  margin: '0 100px'
-  /*
+  display: 'flex',
+  margin: '0 100px',
+
+  '@media (max-width: 425px)': {
     display: 'flex',
-    justifyContent: 'space-around',
-    flexDirection: 'row',
-  */
-})
+    flexDirection: 'column',
+    margin: '0px',
+  },
+})  

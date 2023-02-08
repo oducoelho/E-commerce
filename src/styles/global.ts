@@ -33,6 +33,9 @@ export const globalStyles = globalCss({
     backgroundColor: '$white',
     color: '#000',
     '-webkit-font-smoothing': 'antialiased',
+    '@media (max-width: 425px)': {
+      margin: '0px 0px',
+    },
   },
 
   'body, input, textarea, button': {

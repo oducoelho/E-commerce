@@ -12,15 +12,25 @@ export const Thumbnails = styled('div', {
       width: '95px',
       borderRadius: 8,
       cursor: 'pointer',
-    }
+    },
+    '@media (max-width: 425px)': {
+      display: 'none',
+    },
   }
 })
 export const BigImage = styled('div', {
   marginTop: '40px',
   img: {
-    width: '90%',
+    width: '98%',
     borderRadius: 8,
-  }
+  },
+  '@media (max-width: 425px)': {
+    marginTop: '0px',
+    img: {
+      width: '100%',
+      borderRadius: 0,
+    },
+  },
 })
 
 

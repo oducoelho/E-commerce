@@ -10,6 +10,11 @@ export const HeaderContainer = styled('header', {
   margin: '50px 0',
   paddingBottom: '50px',
   borderBottom: '1px solid $blue100',
+  '@media (max-width: 425px)': {
+    width: '100%', 
+    backgroundColor: 'red',
+    margin: '0px',
+  },
 })
 export const HeaderPartOne = styled('div', {
   display: 'flex',
@@ -35,6 +40,11 @@ export const HeaderPartOne = styled('div', {
         cursor: 'pointer',
       }
     },
+  },
+
+  '@media (max-width: 425px)': {
+    width: '100%',
+    display: 'none',
   },
 })
 export const HeaderPartTwo = styled('div', {

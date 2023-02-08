@@ -48,8 +48,12 @@ export const BuyArea = ({ product }: ProductProps) => {
           <Title>{product.title}</Title>
           <SubTitle>{product.subTitle}</SubTitle>
           <Price>
-            <span>$125.00</span>
-            <strong>50%</strong>
+            <span>
+              $125.00
+              <strong>
+                50%
+              </strong>
+            </span>
             <p>$250.00</p>
           </Price>
           <FinishArea>
