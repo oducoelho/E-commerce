@@ -10,20 +10,23 @@ export const HeaderContainer = styled('header', {
   margin: '50px 0',
   paddingBottom: '50px',
   borderBottom: '1px solid $blue100',
+  span: {
+    fontSize: '$2xl',
+    fontWeight: 700,
+    '@media (max-width: 425px)': {
+      paddingLeft: '55px',
+    },
+  },
   '@media (max-width: 425px)': {
     width: '100%', 
-    backgroundColor: 'red',
     margin: '0px',
+    padding: '10px 10px',
   },
 })
 export const HeaderPartOne = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '100px',
-  span: {
-    fontSize: '$2xl',
-    fontWeight: 700,
-  },
   ul: {
     paddingTop: '7px',
     li: {
@@ -55,7 +58,10 @@ export const HeaderPartTwo = styled('div', {
 
   img: {
     width: '50px',
-  }
+  },
+  '@media (max-width: 425px)': {
+    gap: '1px',
+  },
 })
 
 ////////////////////////Dialog///////////////////////
@@ -91,6 +97,10 @@ export const DialogContent = styled(Dialog.Content, {
   padding: 25,
   animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   '&:focus': { outline: 'none' },
+  '@media (max-width: 425px)': {
+    top: '21%',
+    left: '50%',
+  },
 });
 
 export const DialogTitle = styled(Dialog.Title, {
@@ -237,4 +247,42 @@ export const CheckoutButton = styled('button', {
   fontSize: '16px',
   margin: '30px 0px 0px 0px',
   border: 'none'
+})
+
+/////////////// Mobile Part //////////////////
+
+export const MobileIcon = styled('div', {
+  display: 'none',
+  cursor: 'pointer',
+  marginRight: '375px',
+  zIndex: 10,
+  color: '$gray100',
+  '@media (max-width: 994px)': {
+    display: 'block',
+    position: 'fixed',
+    top: '22px',
+    cursor: 'pointer',
+  }
+})
+
+export const MobileOptions = styled('div', {
+  dispay: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alingItens: 'center',
+  position: 'absolute',
+  top: '0px',
+  left: '0px',
+  width: '60%',
+  height: '100%',
+  color: 'white',
+  backgroundColor: 'white',
+  ul: {
+    li: {
+      margin: '50px 0px 0px 50px',
+      listStyle: 'none',
+      color: 'black',
+      fontSize: '$xl'
+    }
+  }
 })

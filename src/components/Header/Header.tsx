@@ -1,5 +1,6 @@
-import { ShoppingCart, Trash } from "phosphor-react"
+import { ShoppingCart, TextAlignJustify, Trash, X } from "phosphor-react"
 import Avatar from '../../assets/image-avatar.png'
+import thumb1 from '../../assets/image-thumbnail-1.jpg'
 import { 
   Button, 
   CartNotEmpty, 
@@ -14,26 +15,46 @@ import {
   HeaderPartTwo, 
   IconButton, 
   CheckoutButton,
+  MobileIcon,
+  MobileOptions,
 } from "../../styles/pages/Header"
 
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { useCart } from "../../hook/useCart";
+import { useState } from "react";
 
-import thumb1 from '../../assets/image-thumbnail-1.jpg'
-import { CartItem } from "../../context/CartContext";
 
 export const Header = () => {
+  const [menuIsVisible, setMenuIsVisible] = useState(false)
+
   const { cartItems, removeCartItem, cartItemsTotal,  } = useCart()
-  console.log()
+
   const removeShoe = () => {
     removeCartItem()
   }
 
+
   return (
     <HeaderContainer>
+      <MobileIcon onClick={() => setMenuIsVisible(!menuIsVisible)}>
+        {menuIsVisible ? <X size={30} color="#000000" /> : <TextAlignJustify size={30} color="#000000" />}
+      </MobileIcon>
+
+      {menuIsVisible && (
+        <MobileOptions>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </MobileOptions>
+      )}
+
+      <span>sneakers</span>
       <HeaderPartOne>
-        <span>sneakers</span>
         <ul>
           <li>Collections</li>
           <li>Men</li>
