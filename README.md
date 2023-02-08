@@ -1,28 +1,8 @@
-# ⚠ Projeto sendo reformulado ⚠
-
-![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/sneakers?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/allbertuu/sneakers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/allbertuu/sneakers?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/allbertuu/sneakers?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/allbertuu/sneakers?style=for-the-badge)
-
 # E-commerce product page solution 📱
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge-)
-  - [Screenshot](#screenshot-)
-  - [Links](#links-)
-- [My process](#my-process-)
-  - [Built with](#built-with-)
-  - [What I learned](#what-i-learned-)
-  - [Continued development](#continued-development-)
-  - [Useful resources](#useful-resources-)
-- [Author](#author-%EF%B8%8F)
-- [Acknowledgments](#acknowledgments-)
 
 ## Overview
 
@@ -41,23 +21,14 @@ Users should be able to:
 
 ![Main image of website](./screenshot.jpg)
 
-### Links 🚀
-
-- Solution URL: [Access solution page here!](https://www.frontendmentor.io/solutions/ecommerce-product-page-using-react-and-tailwindcss-visDH7ugd)
-- Live Site URL: [Access here!](https://sneakers-allbertuu.vercel.app/)
-
-## My process 
-
 ### Built with ⚙
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - BEM methodology
-- TailwindCSS framework
-- Scss pre-processor
 - Mobile-first workflow
-- MUI React icons lib
+- PhosphorIcons
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned 📚
@@ -105,20 +76,12 @@ Users should be able to:
 <table>
   <tr>
     <td align="center">
-      <a href="https://www.github.com/allbertuu">
-        <img src="https://avatars.githubusercontent.com/u/89992304?v=4" width="100px;" alt="Foto do Alberto Albuquerque no GitHub"/><br>
+      <a href="https://www.github.com/oducoelho">
+        <img src="https://avatars.githubusercontent.com/u/104034703?v=4"width="100px;" alt="Foto do Eduardo Coelho no GitHub"/><br>
         <sub>
-          <b>Alberto Albuquerque</b>
+          <b>Eduardo Coelho</b>104034703?v=4
         </sub>
       </a>
     </td>
   </tr>
 </table>
-
-## Acknowledgments ⭐
-
-I'm so thankful for [Iuri Silva](https://github.com/iuricode), that helped me a lot with his posts about web programming and some tips related.  
-Thank to [SatellaSoft](https://www.youtube.com/watch?v=NXdjf6GJSKo&ab_channel=SatellaSoft) and your channel on YouTube, where I learned how to create a modal with only pure javascript. 
-
-
-[Back to the 🔝](#e-commerce-product-page-solution-)
