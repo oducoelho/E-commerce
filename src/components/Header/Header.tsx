@@ -1,6 +1,20 @@
 import { ShoppingCart, Trash } from "phosphor-react"
 import Avatar from '../../assets/image-avatar.png'
-import { Button, CartNotEmpty, CheckoutContent, DialogContent, DialogLine, DialogOverlay, DialogTitle, Fieldset, Flex, HeaderContainer, HeaderPartOne, HeaderPartTwo, IconButton, Input, Label } from "../../styles/pages/Header"
+import { 
+  Button, 
+  CartNotEmpty, 
+  CheckoutContent, 
+  DialogContent, 
+  DialogLine, 
+  DialogOverlay, 
+  DialogTitle, 
+  Fieldset, 
+  HeaderContainer, 
+  HeaderPartOne, 
+  HeaderPartTwo, 
+  IconButton, 
+  CheckoutButton,
+} from "../../styles/pages/Header"
 
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
@@ -9,14 +23,11 @@ import { useCart } from "../../hook/useCart";
 import thumb1 from '../../assets/image-thumbnail-1.jpg'
 import { CartItem } from "../../context/CartContext";
 
-interface CartProps {
-  shoe: CartItem
-}
-
-export const Header = ({ shoe }: CartProps) => {
+export const Header = () => {
   const { cartItems, removeCartItem, cartItemsTotal,  } = useCart()
+  console.log()
   const removeShoe = () => {
-    alert('removeu')
+    removeCartItem()
   }
 
   return (
@@ -49,18 +60,24 @@ export const Header = ({ shoe }: CartProps) => {
                 <h1>Your cart is empty</h1>
               </Fieldset>  
               :
+              <>
               <CartNotEmpty>
                 <img src={thumb1} alt="" />
                 <CheckoutContent>
                   <p>Fall Limited Edition Sneakers</p>
                   <div>
-                    $125.00 x {cartItems.map((quantity) => (quantity.quantity))} <strong>{cartItemsTotal}</strong>
+                    $125.00 x {cartItems.map((quantity) => (quantity.quantity))} <strong>${cartItemsTotal}.00</strong>
                   </div>
                 </CheckoutContent>
                 <span>
                   <Trash size={25} onClick={removeShoe} />
                 </span>
+
               </CartNotEmpty>
+              <CheckoutButton>
+                Checkout
+              </CheckoutButton>
+              </>
               }
               <Dialog.Close asChild>
                 <IconButton aria-label="Close">

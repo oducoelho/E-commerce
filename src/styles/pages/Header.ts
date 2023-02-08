@@ -24,9 +24,16 @@ export const HeaderPartOne = styled('div', {
     li: {
       listStyle: 'none',
       display: 'inline-block',
-      paddingRight: '20px',
+      marginRight: '20px',
       fontSize: '$md',
-      color: '$blue200'
+      color: '$blue200',
+
+      '&:hover': {
+        borderBottom: '3px solid orange',
+        fontWeight: '700',
+        color: '$black',
+        cursor: 'pointer',
+      }
     },
   },
 })
@@ -40,6 +47,7 @@ export const HeaderPartTwo = styled('div', {
     width: '50px',
   }
 })
+
 ////////////////////////Dialog///////////////////////
 
 export const overlayShow = keyframes({
@@ -106,7 +114,7 @@ export const Button = styled('button', {
     variant: {
       violet: {
         backgroundColor: '$white',
-        color: violet.violet11,
+        color: 'black',
         '&:focus': { boxShadow: `0 0 0 2px black` },
       },
       green: {
@@ -132,13 +140,13 @@ export const IconButton = styled('button', {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color: violet.violet11,
+  color: 'black',
   position: 'absolute',
   top: 10,
   right: 10,
 
-  '&:hover': { backgroundColor: violet.violet4 },
-  '&:focus': { boxShadow: `0 0 0 2px ${violet.violet7}` },
+  '&:hover': { backgroundColor: 'transparent' },
+  '&:focus': { boxShadow: `0 0 0 2px black` },
 });
 
 export const Fieldset = styled('fieldset', {
@@ -184,7 +192,13 @@ export const CartNotEmpty = styled('div', {
 
   span: {
     padding: '20px 0px 0px 50px',
-  }
+    cursor: 'pointer',
+
+    '&:hover': {
+      transition: '300ms',
+      color: 'red',
+    }
+  },
 })
 
 export const CheckoutContent = styled('div', {
@@ -201,4 +215,16 @@ export const CheckoutContent = styled('div', {
   div: {
     fontSize: '15px',
   }
+})
+
+export const CheckoutButton = styled('button', {
+  width: '100%',
+  height: '45px',
+  borderRadius: 8,
+  backgroundColor: '$orange',
+  color: 'white',
+  padding: '0px 10px',
+  fontSize: '16px',
+  margin: '30px 0px 0px 0px',
+  border: 'none'
 })

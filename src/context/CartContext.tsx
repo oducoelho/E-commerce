@@ -18,7 +18,7 @@ interface CartContextType {
     cartItemId: number,
     type: 'increase' | 'decrease',
   ) => void
-  removeCartItem: (productId: number) => void
+  removeCartItem: () => void
 }
 
 export const CartContext = createContext({} as CartContextType)
@@ -63,18 +63,8 @@ export const CartContextProvaider = ({ children }: CartContextProvaiderProps) =>
     return total + cartItem.price * cartItem.quantity
   }, 0)
 
-  const removeCartItem = (productId: number) => {
-    const newCart = produce(cartItems, (draft) => {
-      const shoesExistsInCart = cartItems.findIndex(
-        (cartItem) => cartItem.id === productId,
-      )
-
-      if (shoesExistsInCart >= 0) {
-        draft.splice(shoesExistsInCart, 1)
-      }
-    })
-
-    setCartItems(newCart)
+  const removeCartItem = () => {
+    setCartItems([])
   }
   return (
     <CartContext.Provider
