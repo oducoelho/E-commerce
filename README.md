@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Screenshot 📷
 
-![Main image of website](./screenshot.jpg)
+![Main image of website](https://github.com/oducoelho/E-commerce/blob/master/images/sneaker.JPG)
 
 ### Built with ⚙
 
