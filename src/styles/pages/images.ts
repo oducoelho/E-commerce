@@ -13,6 +13,10 @@ export const Thumbnails = styled('div', {
       borderRadius: 8,
       cursor: 'pointer',
     },
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+    
     '@media (max-width: 425px)': {
       display: 'none',
     },

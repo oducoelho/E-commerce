@@ -257,7 +257,7 @@ export const MobileIcon = styled('div', {
   marginRight: '375px',
   zIndex: 10,
   color: '$gray100',
-  '@media (max-width: 994px)': {
+  '@media (max-width: 425px)': {
     display: 'block',
     position: 'fixed',
     top: '22px',

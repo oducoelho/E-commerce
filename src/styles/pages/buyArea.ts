@@ -2,6 +2,12 @@ import { styled } from "..";
 
 export const BuyAreaContainer = styled('div', {
   margin: '70px 0px 0px 150px',
+  '@media (max-width: 1024px)': {
+    margin: '0px 10px 0px 10px',
+  },
+  '@media (max-width: 768px)': {
+    margin: '0px 10px 0px 10px',
+  },
   '@media (max-width: 425px)': {
     margin: '0px 10px 0px 10px',
   },

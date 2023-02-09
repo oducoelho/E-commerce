@@ -33,6 +33,12 @@ export const globalStyles = globalCss({
     backgroundColor: '$white',
     color: '#000',
     '-webkit-font-smoothing': 'antialiased',
+    '@media (max-width: 1440px)': {
+      margin: '0px 200px 100px 200px',
+    },
+    '@media (max-width: 768px)': {
+      margin: '0px 10px 0px 10px',
+    },
     '@media (max-width: 425px)': {
       margin: '0px 0px',
     },
