@@ -2,17 +2,12 @@
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-
-
-## Overview
-
 ### The challenge ⚡
 
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
 - Switch the large product image by clicking on the small thumbnail images
 - Add items to the cart
 - View the cart and remove items from it
@@ -60,26 +55,19 @@ Users should be able to:
 - Refine my knowledge of create responsive pages
 - Create modals more easily, elegant and smooth.
 
-### Useful resources ✨
-
-- [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en) - This helped me to viewing my page on different screens at once. I really liked this extension and I think you too.
-- I liked so much [this post](https://dev.to/gitanshu_choudhary/crud-operations-in-modern-javascript-379e) about CRUD operations and the logic around it. It helped me to understanding more and better about that subject.
-- [BEM CSS Guidelines](https://cssguidelin.es/#bem-like-naming)
-- [CSS Architecture for Design Systems](https://bradfrost.com/blog/post/css-architecture-for-design-systems/)
 
 ## Author 🙎🏻‍♂️
 
-- Website - [Alberto Albuquerque](https://portfolio-allbertuu.vercel.app/)
-- Frontend Mentor - [@allbertuu](https://www.frontendmentor.io/profile/allbertuu)
-- LinkedIn - [Alberto Albuquerque](https://www.linkedin.com/in/albertov-albuquerque/)
+- Website - [Eduardo Coelho](https://oducoelho.github.io/Portfolio/)
+- LinkedIn - [Eduardo Coelho](https://www.linkedin.com/in/eduardo-coelho-568226207/)
 
 <table>
   <tr>
     <td align="center">
-      <a href="https://www.github.com/oducoelho">
-        <img src="https://avatars.githubusercontent.com/u/104034703?v=4"width="100px;" alt="Foto do Eduardo Coelho no GitHub"/><br>
+      <a href="http://github.com/oducoelho">
+        <img src="https://avatars.githubusercontent.com/u/104034703?v=4" width="100px;" alt="Foto de Eduardo Coelho no GitHub"/><br>
         <sub>
-          <b>Eduardo Coelho</b>104034703?v=4
+          <b>oducoelho</b>
         </sub>
       </a>
     </td>
