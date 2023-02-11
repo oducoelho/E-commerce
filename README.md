@@ -72,4 +72,4 @@ Users should be able to:
       </a>
     </td>
   </tr>
-</table>
+</table> 
